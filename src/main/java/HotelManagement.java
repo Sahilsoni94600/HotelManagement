@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class AJProjet1 {
+public class HotelManagement {
     public static void main(String[] args) {
         String Username = "SahilSoni";
         String Password = "Sahil123";
