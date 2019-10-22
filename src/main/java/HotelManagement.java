@@ -22,14 +22,14 @@ public class HotelManagement {
 
             int Category, quantity, quantity1, quantity2, quantity3;
             String ItemName, item, item1, item2, item3, choice, choice1, choice2, choice3;
-            ArrayList al = new ArrayList();
-            ArrayList al1 = new ArrayList();
-            ArrayList al2 = new ArrayList();
-            ArrayList al3 = new ArrayList();
-            ArrayList al4 = new ArrayList();
-            ArrayList al5 = new ArrayList();
-            ArrayList al6 = new ArrayList();
-            ArrayList al7 = new ArrayList();
+            ArrayList soupList = new ArrayList();
+            ArrayList breadList = new ArrayList();
+            ArrayList riceList = new ArrayList();
+            ArrayList vegetableList = new ArrayList();
+            ArrayList soupQuantity = new ArrayList();
+            ArrayList breadQuantity = new ArrayList();
+            ArrayList riceQuantity = new ArrayList();
+            ArrayList vegetableQuantity = new ArrayList();
             double Price;
             do {
                 System.out.println(" 1. Soup \n 2. Roti and Nan \n 3. Rice \n 4. Vegetables \n 5. Bring the Bill\n\nPlease Select Category: ");
@@ -50,8 +50,8 @@ public class HotelManagement {
                             System.out.println("Do you want to add more Soup?.....If yes then press y otherwise press n");
                             choice = scan.next();
                             if (choice.equals("y")) {
-                                al.add(item);
-                                al4.add(quantity);
+                                soupList.add(item);
+                                soupQuantity.add(quantity);
                             }
                         }
                         while (choice.equals("y"));
@@ -73,8 +73,8 @@ public class HotelManagement {
                             System.out.println("Do you want to add more Soup?.....If yes then press y otherwise press n");
                             choice1 = scan.next();
                             if (choice1.equals("y")) {
-                                al1.add(item1);
-                                al5.add(quantity1);
+                                breadList.add(item1);
+                                breadQuantity.add(quantity1);
                             }
                         }
                         while (choice1.equals("y"));
@@ -96,8 +96,8 @@ public class HotelManagement {
                             choice2 = scan.next();
                             if (choice2.equals("y")) {
 
-                                al2.add(item2);
-                                al6.add(quantity2);
+                                riceList.add(item2);
+                                riceQuantity.add(quantity2);
                             }
                         }
                         while (choice2.equals("y"));
@@ -118,8 +118,8 @@ public class HotelManagement {
                             System.out.println("Do you want to add more Soup?.....If yes then press y otherwise press n");
                             choice3 = scan.next();
                             if (choice3.equals("y")) {
-                                al3.add(item3);
-                                al7.add(quantity3);
+                                vegetableList.add(item3);
+                                vegetableQuantity.add(quantity3);
                             }
                         }
                         while (choice3.equals("y"));
@@ -129,83 +129,83 @@ public class HotelManagement {
                     case 5:{
                         System.out.println("\n\n\nHere's your bill!...\n\n");
                         System.out.println("\t\tItem\t\t\tItem Code\t\t\tQty\t\t\tPrice\t\t\tAmount");
-                        for(int i = 0; i <= al.size(); i++)
-                            System.out.println(al.get(i));
-                        /*for (int i = 0; i < al.size(); i ++){
-                            for (int j = 0; j < al1.size(); j++){
-                                for (int k = 0; k < al2.size(); k++){
-                                    for (int l = 0; l < al3.size(); l++) {
-                                        for (int m = 0; m < al4.size(); m++) {
-                                            for (int n = 0; n < al5.size(); n++) {
-                                                for (int o = 0; o < al6.size(); o++) {
-                                                    for (int p = 0; p < al7.size(); p++) {
-                                                        if (al.get(i) == "VSCP") {
+                        for(int i = 0; i <= soupList.size(); i++)
+                            System.out.println(soupList.get(i));
+                        /*for (int i = 0; i < soupList.size(); i ++){
+                            for (int j = 0; j < breadList.size(); j++){
+                                for (int k = 0; k < riceList.size(); k++){
+                                    for (int l = 0; l < vegetableList.size(); l++) {
+                                        for (int m = 0; m < soupQuantity.size(); m++) {
+                                            for (int n = 0; n < breadQuantity.size(); n++) {
+                                                for (int o = 0; o < riceQuantity.size(); o++) {
+                                                    for (int p = 0; p < vegetableQuantity.size(); p++) {
+                                                        if (soupList.get(i) == "VSCP") {
                                                             ItemName = "Vegetable Sweet Corn Soup";
                                                             Price = 60.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al.get(i) + "\t\t\t" + al4.get(i) + "\t\t\t");
-                                                        } else if (al.get(i) == "VHSS") {
+                                                            System.out.println(ItemName + "\t\t\t" + soupList.get(i) + "\t\t\t" + soupQuantity.get(i) + "\t\t\t");
+                                                        } else if (soupList.get(i) == "VHSS") {
                                                             ItemName = "Vegetable Hot and Sour Soup";
                                                             Price = 60.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al.get(i) + "\t\t\t" + al4.get(i) + "\t\t\t");
-                                                        } else if (al.get(i) == "VNS") {
+                                                            System.out.println(ItemName + "\t\t\t" + soupList.get(i) + "\t\t\t" + soupQuantity.get(i) + "\t\t\t");
+                                                        } else if (soupList.get(i) == "VNS") {
                                                             ItemName = "Vegetable Noodle Soup";
                                                             Price = 60.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al.get(i) + "\t\t\t" + al4.get(i) + "\t\t\t");
-                                                        } else if (al.get(i) == "VCS") {
+                                                            System.out.println(ItemName + "\t\t\t" + soupList.get(i) + "\t\t\t" + soupQuantity.get(i) + "\t\t\t");
+                                                        } else if (soupList.get(i) == "VCS") {
                                                             ItemName = "Vegetable Clear Soup";
                                                             Price = 60.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al.get(i) + "\t\t\t" + al4.get(i) + "\t\t\t");
+                                                            System.out.println(ItemName + "\t\t\t" + soupList.get(i) + "\t\t\t" + soupQuantity.get(i) + "\t\t\t");
                                                         }
-                                                        if (al1.get(j) == "TR") {
+                                                        if (breadList.get(j) == "TR") {
                                                             ItemName = "Tandoori Roti";
                                                             Price = 18.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al1.get(i) + "\t\t\t" + al5.get(i) + "\t\t\t");
-                                                        } else if (al1.get(j) == "BTR") {
+                                                            System.out.println(ItemName + "\t\t\t" + breadList.get(i) + "\t\t\t" + breadQuantity.get(i) + "\t\t\t");
+                                                        } else if (breadList.get(j) == "BTR") {
                                                             ItemName = "Butter Tandoori Roti";
                                                             Price = 25.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al1.get(i) + "\t\t\t" + al5.get(i) + "\t\t\t");
-                                                        } else if (al1.get(j) == "PN") {
+                                                            System.out.println(ItemName + "\t\t\t" + breadList.get(i) + "\t\t\t" + breadQuantity.get(i) + "\t\t\t");
+                                                        } else if (breadList.get(j) == "PN") {
                                                             ItemName = "Plain Nan";
                                                             Price = 33.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al1.get(i) + "\t\t\t" + al5.get(i) + "\t\t\t");
-                                                        } else if (al1.get(j) == "BN") {
+                                                            System.out.println(ItemName + "\t\t\t" + breadList.get(i) + "\t\t\t" + breadQuantity.get(i) + "\t\t\t");
+                                                        } else if (breadList.get(j) == "BN") {
                                                             ItemName = "Butter Nan";
                                                             Price = 42.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al1.get(i) + "\t\t\t" + al5.get(i) + "\t\t\t");
+                                                            System.out.println(ItemName + "\t\t\t" + breadList.get(i) + "\t\t\t" + breadQuantity.get(i) + "\t\t\t");
                                                         }
-                                                        if (al2.get(k) == "P") {
+                                                        if (riceList.get(k) == "P") {
                                                             ItemName = "Pulao";
                                                             Price = 50.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al2.get(i) + "\t\t\t" + al6.get(i) + "\t\t\t");
-                                                        } else if (al2.get(k) == "VP") {
+                                                            System.out.println(ItemName + "\t\t\t" + riceList.get(i) + "\t\t\t" + riceQuantity.get(i) + "\t\t\t");
+                                                        } else if (riceList.get(k) == "VP") {
                                                             ItemName = "Veg Pulao";
                                                             Price = 80.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al2.get(i) + "\t\t\t" + al6.get(i) + "\t\t\t");
-                                                        } else if (al2.get(k) == "R") {
+                                                            System.out.println(ItemName + "\t\t\t" + riceList.get(i) + "\t\t\t" + riceQuantity.get(i) + "\t\t\t");
+                                                        } else if (riceList.get(k) == "R") {
                                                             ItemName = "Rice";
                                                             Price = 40.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al2.get(i) + "\t\t\t" + al6.get(i) + "\t\t\t");
-                                                        } else if (al2.get(k) == "VFR") {
+                                                            System.out.println(ItemName + "\t\t\t" + riceList.get(i) + "\t\t\t" + riceQuantity.get(i) + "\t\t\t");
+                                                        } else if (riceList.get(k) == "VFR") {
                                                             ItemName = "Veg Fried Rice";
                                                             Price = 60.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al2.get(i) + "\t\t\t" + al6.get(i) + "\t\t\t");
+                                                            System.out.println(ItemName + "\t\t\t" + riceList.get(i) + "\t\t\t" + riceQuantity.get(i) + "\t\t\t");
                                                         }
-                                                        if (al3.get(l) == "DM") {
+                                                        if (vegetableList.get(l) == "DM") {
                                                             ItemName = "Dal Makhni";
                                                             Price = 80.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al3.get(i) + "\t\t\t" + al7.get(i) + "\t\t\t");
-                                                        } else if (al3.get(l) == "DF") {
+                                                            System.out.println(ItemName + "\t\t\t" + vegetableList.get(i) + "\t\t\t" + vegetableQuantity.get(i) + "\t\t\t");
+                                                        } else if (vegetableList.get(l) == "DF") {
                                                             ItemName = "Dal Fry";
                                                             Price = 80.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al3.get(i) + "\t\t\t" + al7.get(i) + "\t\t\t");
-                                                        } else if (al3.get(l) == "KP") {
+                                                            System.out.println(ItemName + "\t\t\t" + vegetableList.get(i) + "\t\t\t" + vegetableQuantity.get(i) + "\t\t\t");
+                                                        } else if (vegetableList.get(l) == "KP") {
                                                             ItemName = "Kadhai Panner";
                                                             Price = 100.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al3.get(i) + "\t\t\t" + al7.get(i) + "\t\t\t");
-                                                        } else if (al3.get(l) == "MV") {
+                                                            System.out.println(ItemName + "\t\t\t" + vegetableList.get(i) + "\t\t\t" + vegetableQuantity.get(i) + "\t\t\t");
+                                                        } else if (vegetableList.get(l) == "MV") {
                                                             ItemName = "Mix Veg";
                                                             Price = 70.00;
-                                                            System.out.println(ItemName + "\t\t\t" + al3.get(i) + "\t\t\t" + al7.get(i) + "\t\t\t");
+                                                            System.out.println(ItemName + "\t\t\t" + vegetableList.get(i) + "\t\t\t" + vegetableQuantity.get(i) + "\t\t\t");
                                                         }
                                                     }
                                                 }
