@@ -1,4 +1,5 @@
 //Java, JDK JRE JVM
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class HotelManagement {
@@ -30,7 +31,8 @@ public class HotelManagement {
             ArrayList breadQuantity = new ArrayList();
             ArrayList riceQuantity = new ArrayList();
             ArrayList vegetableQuantity = new ArrayList();*/
-            double Price;
+            ArrayList<Double> TotalAmount = new ArrayList<Double>();
+            double Price, Amount, totalAmount = 0.00;
             do {
                 System.out.println(" 1. Soup \n 2. Roti and Nan \n 3. Rice \n 4. Vegetables \n 5. Bring the Bill\n\nPlease Select Category: ");
                 Category = scan.nextInt();
@@ -144,69 +146,107 @@ public class HotelManagement {
                             if (key.equals("VSCP")) {
                                 itemName = "Vegetable Sweet Corn Soup";
                                 Price = 60.00;
-                                System.out.println(itemName + "  \t\t\t" + key + "    \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "  \t\t\t" + key + "    \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("VHSS")) {
                                 itemName = "Vegetable Hot and Sour Soup";
                                 Price = 60.00;
-                                System.out.println(itemName + "\t\t\t" + key + "    \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "\t\t\t" + key + "    \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("VNS")) {
                                 itemName = "Vegetable Noodle Soup";
                                 Price = 60.00;
-                                System.out.println(itemName + "      \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "      \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("VCS")) {
                                 itemName = "Vegetable Clear Soup";
                                 Price = 60.00;
-                                System.out.println(itemName + "       \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "       \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("TR")) {
                                 itemName = "Tandoori Roti";
                                 Price = 18.00;
-                                System.out.println(itemName + "           \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "           \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("BTR")) {
                                 itemName = "Butter Tandoori Roti";
                                 Price = 25.00;
-                                System.out.println(itemName + "       \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "       \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("PN")) {
                                 itemName = "Plain Nan";
                                 Price = 33.00;
-                                System.out.println(itemName + "                  \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                  \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("BN")) {
                                 itemName = "Butter Nan";
                                 Price = 42.00;
-                                System.out.println(itemName + "                 \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                 \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("P")) {
                                 itemName = "Pulao";
                                 Price = 50.00;
-                                System.out.println(itemName + "                      \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                      \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("VP")) {
                                 itemName = "Veg Pulao";
                                 Price = 80.00;
-                                System.out.println(itemName + "                  \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                  \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("R")) {
                                 itemName = "Rice";
                                 Price = 40.00;
-                                System.out.println(itemName + "                       \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                       \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("VFR")) {
                                 itemName = "Veg Fried Rice";
                                 Price = 60.00;
-                                System.out.println(itemName + "             \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "             \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("DM")) {
                                 itemName = "Dal Makhni";
                                 Price = 80.00;
-                                System.out.println(itemName + "                 \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                 \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("DF")) {
                                 itemName = "Dal Fry";
                                 Price = 80.00;
-                                System.out.println(itemName + "                    \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                    \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("KP")) {
                                 itemName = "Kadhai Paneer";
                                 Price = 100.00;
-                                System.out.println(itemName + "              \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "              \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             } else if (key.equals("MV")) {
                                 itemName = "Mix Veg";
                                 Price = 70.00;
-                                System.out.println(itemName + "                    \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Price*value);
+                                Amount = Price*value;
+                                TotalAmount.add(Amount);
+                                System.out.println(itemName + "                    \t\t\t" + key + "        \t\t\t" + value + "\t\t\t" + Price + "\t\t\t" + Amount);
                             }
                         }
+
+                        for (int i = 0; i < TotalAmount.size(); i++) {
+                            totalAmount += TotalAmount.get(i);
+                        }
+                        System.out.println("\n\nTotal Amount To Be Paid is : " + totalAmount);
+                        System.out.println("\n...*Thanks For Visiting Us!*...");
 
 
                         /*if (menu.containsKey("VSCP")) {
