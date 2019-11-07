@@ -1,4 +1,4 @@
-//Java, JDK JRE JVM
+package solution1;//Java, JDK JRE JVM
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -40,12 +40,12 @@ public class HotelManagement {
                     case 1: {
                         System.out.println("\n\n\n--Soup--\n");
                         do {
-                            System.out.println("           Item           \t\t\t\tItems Code\t\t\t\t Price");
+                            System.out.println("           Item           \t\t\t\tsolution2.Items Code\t\t\t\t Price");
                             System.out.println("• Vegetable Sweet Corn Soup  \t\t\t\tVSCP   \t\t\t\tRs. 60.00");
                             System.out.println("• Vegetable Hot and Sour Soup\t\t\t\tVHSS   \t\t\t\tRs. 60.00");
                             System.out.println("• Vegetable Noodle Soup      \t\t\t\tVNS    \t\t\t\tRs. 60.00");
                             System.out.println("• Vegetable Clear Soup       \t\t\t\tVCS    \t\t\t\tRs. 60.00");
-                            System.out.print("\nSelect Items by Item Code: ");
+                            System.out.print("\nSelect solution2.Items by Item Code: ");
                             item = scan.next();
                             System.out.print("Enter quantity of this item: ");
                             quantity = scan.nextInt();
@@ -62,12 +62,12 @@ public class HotelManagement {
                         System.out.println("\n\n\n--Roti and Nan--\n");
                         do {
 
-                            System.out.println("      Item        \t\t\t\tItems Code\t\t\t\t Price");
+                            System.out.println("      Item        \t\t\t\tsolution2.Items Code\t\t\t\t Price");
                             System.out.println("• Tandoori Roti       \t\t\t\tTR    \t\t\t\tRs. 18.00");
                             System.out.println("• Butter Tandoori Roti\t\t\t\tBTR   \t\t\t\tRs. 25.00");
                             System.out.println("• Plain Nan           \t\t\t\tPN    \t\t\t\tRs. 33.00");
                             System.out.println("• Butter Nan          \t\t\t\tBN    \t\t\t\tRs. 42.00");
-                            System.out.print("\nSelect Items by Item Code: ");
+                            System.out.print("\nSelect solution2.Items by Item Code: ");
                             item = scan.next();
                             System.out.println("Enter quantity of this item: ");
                             quantity = scan.nextInt();
@@ -86,12 +86,12 @@ public class HotelManagement {
                     case 3: {
                         System.out.println("\n\n\n--Rice--\n");
                         do {
-                            System.out.println("      Item           \t\t\t\tItems Code \t\t\t\t Price");
+                            System.out.println("      Item           \t\t\t\tsolution2.Items Code \t\t\t\t Price");
                             System.out.println("• Pulao                   \t\t\t\tP     \t\t\t\tRs. 50.00");
                             System.out.println("• Veg Pulao               \t\t\t\tVP    \t\t\t\tRs. 80.00");
                             System.out.println("• Rice                    \t\t\t\tR     \t\t\t\tRs. 40.00");
                             System.out.println("• Veg Fried Rice          \t\t\t\tVFR   \t\t\t\tRs. 60.00");
-                            System.out.print("\nSelect Items by Item Code: ");
+                            System.out.print("\nSelect solution2.Items by Item Code: ");
                             item = scan.next();
                             System.out.print("Enter quantity of this item: ");
                             quantity = scan.nextInt();
@@ -112,12 +112,12 @@ public class HotelManagement {
                     case 4: {
                         System.out.println("\n\n\n--Vegetables--\n");
                         do {
-                            System.out.println("     Item         \t\t\t\tItems Code\t\t\t\t Price");
+                            System.out.println("     Item         \t\t\t\tsolution2.Items Code\t\t\t\t Price");
                             System.out.println("• Dal Makhni         \t\t\t\tDM     \t\t\t\tRs. 80.00");
                             System.out.println("• Dal Fry            \t\t\t\tDF     \t\t\t\tRs. 80.00");
                             System.out.println("• Kadhai Paneer      \t\t\t\tKP     \t\t\t\tRs. 100.00");
                             System.out.println("• Mix Veg            \t\t\t\tMV     \t\t\t\tRs. 70.00");
-                            System.out.print("\nSelect Items by Item Code: ");
+                            System.out.print("\nSelect solution2.Items by Item Code: ");
                             item = scan.next();
                             System.out.print("Enter quantity of this item: ");
                             quantity = scan.nextInt();
